@@ -5,8 +5,9 @@ import redisConnection from "../config/redisConfig";
 
 export default function SampleWorker(queueName:string){
     new Worker(queueName,async (job:Job)=>{
-        console.log("sample job worker kicking",job)
+        
         if(job.name === 'SampleJob'){
+            
             const sampleJobInstance = new SampleJob(job.data);
             sampleJobInstance.handle(job);
             return true;
