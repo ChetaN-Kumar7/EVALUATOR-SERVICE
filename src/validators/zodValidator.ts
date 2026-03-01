@@ -1,4 +1,4 @@
-import { success, ZodSchema } from "zod"
+import { ZodSchema } from "zod";
 import { NextFunction, Request, Response } from "express"
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
